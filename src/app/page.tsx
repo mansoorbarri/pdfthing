@@ -12,7 +12,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="hover:underline"
           >
-            Theo
+            Mansoor
           </a>
           . I built these tools because current one suck.
         </div>
