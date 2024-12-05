@@ -21,7 +21,7 @@ export default function Home() {
           Split PDF
         </Link>
       </main>
-      <footer className="mt-8 text-center text-sm text-gray-500">
+      <footer className="flex flex-col mt-8 text-center text-sm text-gray-500">
         <a
           href="https://github.com/mansoorbarri/pdfthing"
           target="_blank"
@@ -30,6 +30,12 @@ export default function Home() {
         >
           View on GitHub
         </a>
+          <a href="https://quickpic.t3.gg/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:underline"> 
+          Inspired by QuickPic
+          </a>
       </footer>
     </div>
   );

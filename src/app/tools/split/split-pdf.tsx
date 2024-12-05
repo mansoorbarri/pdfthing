@@ -76,7 +76,7 @@ const SplitPDF = () => {
     link.click(); // Trigger the download
     document.body.removeChild(link); // Clean up the DOM
   };
-
+  
   const handleClear = () => {
     setFiles([]);
     setPageImages([]);
