@@ -4,8 +4,8 @@ export const runtime = "edge";
 export const alt = "SVG ➡️ PNG - QuickPic";
 export const contentType = "image/png";
 export const size = {
-  width: 1200,
-  height: 630,
+  width: 900,
+  height: 450,
 };
 
 export default async function Image() {
