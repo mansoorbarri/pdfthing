@@ -17,8 +17,8 @@ export default function Home() {
           . I built these tools because current one suck.
         </div>
         <div className="mt-4"></div>
-        <Link href="/combine" className="text-blue-500 hover:underline">
-          Combine PDF
+        <Link href="/tools/split" className="text-blue-500 hover:underline">
+          Split PDF
         </Link>
       </main>
       <footer className="mt-8 text-center text-sm text-gray-500">
