@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import JSZip from "jszip"; // Import JSZip
 import { PDFDocument } from "pdf-lib";
 import { UploadBox } from "@/components/upload-box";
-import Image from "next/image";
 
 const SplitPDF = () => {
   const [files, setFiles] = useState<File[]>([]);
@@ -99,7 +98,8 @@ const SplitPDF = () => {
               {files.map((file, index) => (
                 <div key={index} className="flex flex-col items-center">
                   {/* Render page preview as image */}
-                  <Image
+                  <img
+                    key={index}
                     src={pageImages[index]}
                     alt={`Page ${index + 1}`}
                     className="w-32 h-44 object-cover border border-gray-300 rounded-lg mb-2"
