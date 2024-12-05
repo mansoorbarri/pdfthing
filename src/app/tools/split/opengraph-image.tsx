@@ -25,6 +25,8 @@ export default async function Image() {
       },
     });
   } catch (error) {
+    console.error(error); // Log the error to the console
     return new Response("Error generating image", { status: 500 });
   }
 }
+
