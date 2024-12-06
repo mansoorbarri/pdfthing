@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a style="text-decoration:none;" href="https://pdfthing.mansoorbarri.com" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">pdfthing</a> - A PDF Utility Site Done Right
+  <a style="text-decoration:none;" href="https://pdfthing.mansoorbarri.com" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">pdfthing</a> - A PDF Utility Done Right
 </h1>
 
 Welcome to **pdfthing**! 🎉
