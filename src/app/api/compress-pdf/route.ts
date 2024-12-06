@@ -26,6 +26,6 @@ export const POST = async (req: NextRequest) => {
     });
   } catch (error) {
     console.error('Error compressing PDF:', error);
-    return NextResponse.json({ error: 'Failed to compress PDF' }, { status: 500 });
-  }
+    return NextResponse.json({ error: error instanceof Error ? error.message : 'Failed to compress PDF' }, { status: 500 });
+  }  
 };
