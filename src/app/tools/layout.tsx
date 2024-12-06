@@ -39,8 +39,8 @@ export default function ToolsLayout({
         {children}
       </main>
       <footer className="mt-auto text-center text-sm text-gray-500 mb-5">
-        <a
-          href="https://github.com/t3dotgg/quickpic"
+      <a
+          href="https://github.com/mansoorbarri/pdfthing"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:underline"
