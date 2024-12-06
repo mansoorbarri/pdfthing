@@ -17,6 +17,9 @@ export default function Home() {
           . I built these tools because current one suck.
         </div>
         <div className="mt-4"></div>
+        <Link href="/tools/compress" className="text-blue-500 hover:underline">
+          Compress PDF
+        </Link>
         <Link href="/tools/split" className="text-blue-500 hover:underline">
           Split PDF
         </Link>
