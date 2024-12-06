@@ -1,16 +1,13 @@
-import type { NextConfig } from "next";
+import { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-
   webpack: (config) => {
-    config.module.rules.push({
-      test: /pdf\.worker\.min\.js$/,
-      use: "worker-loader",
-    });
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      canvas: false, // Prevent Next.js from bundling the Node.js 'canvas'
+    };
     return config;
   },
 };
-
-module.exports = nextConfig;
 
 export default nextConfig;
