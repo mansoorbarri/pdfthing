@@ -28,29 +28,13 @@ Because the other PDF tools out there were either too complicated, too slow, or 
 ### Compress PDFs
 - Upload large PDFs and shrink them down to a manageable size without sacrificing quality.
 
-## How to Use 📥
-
-1. Visit [**pdfthing.mansoorbarri.com**](https://pdfthing.mansoorbarri.com).
-2. Choose your operation (split or compress).
-3. Upload your PDF.
-4. Wait for it to process.
-5. Download your new file!
-
-That's it. Simple, right? 😉
+read more about this at: [pdfthing - a product of frustration](https://mansoorbarri.com/pdfthing-product-of-frustration)
 
 ## Contributing 🤝
 
 While it's not a massive open-source project just yet, feel free to fork the repo if you want to help out! Here's what I'm currently working on:
-- More PDF tools (merging, rotating, etc.)
-- Improving compression algorithms
-- Adding better error handling and edge cases
 
 If you have an idea or a feature you'd like to see, let me know by creating an issue or sending a pull request!
-
-## Tech Stack 🛠️
-
-- **Frontend**: Built with HTML, CSS, and a little JavaScript to make the magic happen.
-- **Backend**: Simple and fast processing, built to handle PDFs without unnecessary complexity.
 
 ## License 📜
 
@@ -58,6 +42,6 @@ This project is open-source! Feel free to use it as you please under the MIT Lic
 
 ## Contact 📬
 
-Have questions or just want to say hi? You can reach me on [Twitter](https://twitter.com/mansoorbarri) or email me at mansoorbarri@example.com.
+Have questions or just want to say hi? You can reach me on [Twitter](https://x.com/mansoorbarri).
 
 Thanks for checking out **pdfthing**! Enjoy your smoother PDF experience. 😎
