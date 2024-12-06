@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { compress } from 'compress-pdf';
-import { promises as fs } from 'fs';
-import path from 'path';
 
 export const POST = async (req: NextRequest) => {
   try {
