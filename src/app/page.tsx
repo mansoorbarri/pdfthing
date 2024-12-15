@@ -20,6 +20,9 @@ export default function Home() {
         <Link href="/tools/compress" className="text-blue-500 hover:underline">
           Compress PDF
         </Link>
+        <Link href="/tools/convert" className="text-blue-500 hover:underline">
+          Convert PDF
+        </Link>
         <Link href="/tools/split" className="text-blue-500 hover:underline">
           Split PDF
         </Link>
