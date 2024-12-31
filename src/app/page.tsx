@@ -23,6 +23,9 @@ export default function Home() {
         <Link href="/tools/convert" className="text-blue-500 hover:underline">
           Convert PDF
         </Link>
+        <Link href="/tools/merge" className="text-blue-500 hover:underline">
+          Merge PDF
+        </Link>
         <Link href="/tools/split" className="text-blue-500 hover:underline">
           Split PDF
         </Link>

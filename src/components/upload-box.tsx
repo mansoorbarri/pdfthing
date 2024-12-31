@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
 interface UploadBoxProps {
-  onUpload: (file: File | null) => void;
+  onUpload: ((file: File | null) => void) | ((files: File[]) => void);
   processing: boolean;
+  multiple?: boolean;  // New prop to control multiple file upload
 }
 
-export const UploadBox: React.FC<UploadBoxProps> = ({ onUpload, processing }) => {
+export const UploadBox: React.FC<UploadBoxProps> = ({ onUpload, processing, multiple = false }) => {
   const [isDragOver, setIsDragOver] = useState(false);
 
   const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
@@ -20,13 +21,30 @@ export const UploadBox: React.FC<UploadBoxProps> = ({ onUpload, processing }) =>
   const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
     setIsDragOver(false);
-    const file = event.dataTransfer.files[0];
-    if (file) onUpload(file);
+    
+    const droppedFiles = Array.from(event.dataTransfer.files).filter(
+      file => file.type === 'application/pdf'
+    );
+
+    if (droppedFiles.length === 0) return;
+
+    if (multiple) {
+      (onUpload as (files: File[]) => void)(droppedFiles);
+    } else {
+      (onUpload as (file: File | null) => void)(droppedFiles[0]);
+    }
   };
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0] || null;
-    onUpload(file);
+    const selectedFiles = event.target.files ? Array.from(event.target.files) : [];
+    
+    if (selectedFiles.length === 0) return;
+
+    if (multiple) {
+      (onUpload as (files: File[]) => void)(selectedFiles);
+    } else {
+      (onUpload as (file: File | null) => void)(selectedFiles[0]);
+    }
   };
 
   return (
@@ -38,14 +56,16 @@ export const UploadBox: React.FC<UploadBoxProps> = ({ onUpload, processing }) =>
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
     >
-      <p className="mb-2 text-gray-600">Drag and drop your PDF here</p>
+      <p className="mb-2 text-gray-600">
+        Drag and drop your PDF{multiple ? 's' : ''} here
+      </p>
       <label
         htmlFor="file-upload"
         className={`cursor-pointer bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 ${
           processing ? "opacity-50 cursor-not-allowed" : ""
         }`}
       >
-        Choose File
+        Choose File{multiple ? 's' : ''}
       </label>
       <input
         id="file-upload"
@@ -54,7 +74,13 @@ export const UploadBox: React.FC<UploadBoxProps> = ({ onUpload, processing }) =>
         onChange={handleInputChange}
         className="hidden"
         disabled={processing}
+        multiple={multiple}
       />
+      {multiple && (
+        <p className="mt-2 text-sm text-gray-500">
+          Select multiple files by holding Ctrl/Cmd while choosing
+        </p>
+      )}
       {processing && <p className="mt-2 text-sm text-gray-500">Processing...</p>}
     </div>
   );
