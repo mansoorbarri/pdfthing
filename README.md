@@ -13,7 +13,7 @@ Currently, **pdfthing** supports:
 These features are what I need right now, but stay tuned! More tools might come as I continue working on the site.
 
 Check it out at:  
-[**pdfthing.mansoorbarri.com**](https://pdfthing.mansoorbarri.com) 🚀
+[**pdfthing.hepton.uk**](https://pdfthing.hepton.uk) 🚀
 
 ## Why pdfthing? 🤔
 
