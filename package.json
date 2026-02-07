@@ -19,7 +19,7 @@
     "compressorjs": "^1.2.1",
     "fs": "0.0.1-security",
     "jszip": "^3.10.1",
-    "next": "15.0.3",
+    "next": "15.0.7",
     "pdf-lib": "^1.17.1",
     "pdfjs-dist": "^2.16.105",
     "prettier": "^3.4.2",
